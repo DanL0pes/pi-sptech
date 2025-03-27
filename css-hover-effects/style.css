@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+*{
+    font-family: 'DM Sans';
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    min-height: 100vh;
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #FFF;
+}
+nav h1{
+    margin: 18px 34px;
+}
+nav .links{
+    display: flex;
+    gap: 42px;
+    padding-inline: 34px;
+}
+nav .links .link{
+    display: flex;
+    align-items: center;
+    color: #FFF;
+    text-decoration: none;
+}
+nav .link:hover{
+    font-weight: bold;
+}
+nav .link img{
+    width: 32px;
+}
+
+section{
+    background-color: black;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+}
+
+section button{
+    font-size: 1.5em;
+    padding: 10px 30px;
+    border-radius: 12px;
+    border: 2px #FFF solid;
+    background-color: transparent;
+    color: #FFF;
+    cursor: pointer; 
+    transition: .3s;
+}
+
+#btn-bg-color:hover{ /* Aqui vai o codigo onde desejo mudar com a sobreposição do MOUSE, usando HOVER */
+    background-color: #FFF;
+    color: #000;
+}
+
+/* Cor fundo transitando - Para realizar e ficar em loop utilizaremos o keyframe */
+@keyframes bgChangingColor {
+    0%{
+        background-position: 0%;
+    }
+    100%{
+        background-position: 1000%;
+    }
+}
+#btn-bg-changing-color:hover{
+    background: rgb(37,155,255);
+    background: linear-gradient(124deg, rgba(37,155,255,1) 0%, rgba(163,47,149,1) 20%, rgba(235,94,106,1) 31%, rgba(255,37,37,1) 45%, rgba(255,238,37,1) 65%, rgba(106,212,113,1) 78%, rgba(37,155,255,1) 92%);
+    background-size: 500%;
+    background-repeat: repeat;
+    animation: bgChangingColor 30s infinite;
+}
+
+section:has(#btn-bg-section-changer:hover){
+    background-color: #331053;
+}
+#btn-bg-section-changer:hover{
+    background-color: #FFF;
+    color: #331053;
+}
+
+#btn-scale:hover{
+    scale: 1.1;
+}
+
+#btn-rotate:hover{
+    rotate: -360deg;
+} /* Nesse caso há uma falha pois o botão se meche com o HOVER, para resolver podemos executar uma animação com keyframes */
+
+@keyframes shaking {
+    10%{rotate: 20deg;}
+    30%{rotate: -20deg;}
+    45%{rotate: 20deg;}
+    60%{rotate: -20deg;}
+    75%{rotate: 20deg;}
+    90%{rotate: -20deg;}
+}
+#btn-shaking:hover{
+    animation: shaking 4s;
+}
+
