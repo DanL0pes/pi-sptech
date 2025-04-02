@@ -9,7 +9,7 @@ body{
     margin: 0;
 }
 .header{
-    border-bottom: 2px solid aqua;
+    border-bottom: 2px solid #58b5c5;
 }
 .container{
     display: flex;
@@ -22,17 +22,17 @@ body{
     justify-content: space-between;
 }
 .header .container .titulo{
-    color: aqua;
+    color: #58b5c5;
 }
 .header .navbar{
     display: flex;
     justify-content: space-between;
     width: 320px;
     list-style: none;
-    color: yellow;
+    color: #ffae00;
 }
 .navbar a{
-    color: yellow;
+    color: #ffae00;
     text-decoration: none;
 }
 .navbar .agora{
@@ -41,7 +41,7 @@ body{
 
 /* BANNER */
 .banner{
-    height: 300px;
+    height: 50vh;
     background-image: url('../assets/imgs/bg-jelly-fish-para_outras_pags.png');
 }
 .banner .container p{
@@ -58,6 +58,7 @@ body{
     justify-content: center
 }
 
+/* SOCIAL */
 .social{
     background-color: #FFF;
 }
@@ -79,11 +80,89 @@ body{
     width: 50%;
 }
 .boxes .box h4{
-    color: crimson;
+    color: #e9617c;
+    margin-bottom: 0;
 }
 
-.footer .container{
-    justify-content: space-between;
-    align-items: center;
+/* FOOTER - RODAPÉ */
+.footer{
+    background-color: #58b5c5;
     color: #FFF;
+    padding: 10px 0px;
+}
+.footer .container{
+    flex-direction: column;
+    align-items: center;
+}
+.footer h4{
+    margin: 0;
+}
+
+/* LOGIN E CADASTRO */
+.login{
+    background-image: url('../assets/imgs/bg-jelly-fish-para_outras_pags.png');
+    height: 100%;
+}
+.login .container{
+    height: 700px;
+    align-items: center;
+    justify-content: center;
+}
+
+.card{
+    background-color: #dfdfdf;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 60px;
+    border-radius: 12px;
+}
+.card h2{
+    margin: 0;
+    color: #e9617c;
+    font-weight: bold;
+}
+.formulario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.card-login .formulario{
+    height: 160px;
+}
+.card-cadastro .formulario{
+    height: 400px;
+}
+.campo{
+    display: flex;
+    flex-direction: column;
+}
+.campo span{
+    font-weight: bold;
+    color: #e9617c;
+}
+.campo input{
+    width: 400px;
+    padding: 8px;
+    text-align: center;
+    border-radius: 8px;
+    border: 2px solid #58b5c5;
+}
+
+.botao{
+    background-color: #d33857;
+    color: #FFF;
+    border: none;
+    padding: 5px 30px;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* SIMULADOR */
+.simulador .container{
+    color: #FFF;
+    flex-direction: column;
 }
